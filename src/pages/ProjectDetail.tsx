@@ -22,8 +22,8 @@ export default function ProjectDetail() {
   const [addDialogOpen, setAddDialogOpen] = useState(false);
   const [selectedLayer, setSelectedLayer] = useState<ProjectLayer | null>(null);
   const [styleDialogOpen, setStyleDialogOpen] = useState(false);
-  const [mapCenter, setMapCenter] = useState<[number, number]>([48.8566, 2.3522]);
-  const [mapZoom, setMapZoom] = useState(13);
+  const [mapCenter] = useState<[number, number]>([48.8566, 2.3522]);
+  const [mapZoom] = useState(13);
 
   // Fetch project
   const { data: project, isLoading: projectLoading } = useQuery({
@@ -160,7 +160,6 @@ export default function ProjectDetail() {
     return false;
   });
 
-
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Main Content */}
@@ -203,7 +202,10 @@ export default function ProjectDetail() {
           </div>
 
           {/* Data Analysis Panel */}
-          <DataAnalysisPanel layersData={layersData || []} layers={layers || []} />
+          <DataAnalysisPanel
+            layersData={layersData || []}
+            layers={layers || []}
+          />
         </main>
       </div>
 
