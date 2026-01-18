@@ -24,7 +24,7 @@ npm run dev
 **Identifiants par défaut:**
 ```
 Email: admin@hyreveal.com
-Mot de passe: Admin123!
+Mot de passe: Password123!!
 ```
 
 ---

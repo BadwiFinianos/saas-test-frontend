@@ -102,7 +102,7 @@ export default function Login() {
           <div className="mt-6 text-center text-sm text-gray-500">
             <p>Identifiants par défaut:</p>
             <p className="font-mono text-xs mt-1">
-              admin@hyreveal.com / Admin123!
+              admin@hyreveal.com / Password123!!
             </p>
           </div>
         </CardContent>
